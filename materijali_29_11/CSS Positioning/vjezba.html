@@ -1,0 +1,76 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS positioning</title>
+    <style>
+        .relative {
+            width: 500px;
+            height: 300px;
+            border: 1px solid black;
+            position: relative; 
+        }
+        .prvi {
+            width: 200px;
+            height: 300px;
+            background-color: rgba(25, 251, 120, 0.8);
+            position: absolute;
+            z-index: 10;
+        }
+        .drugi {
+            width: 200px;
+            height: 300px;
+            background-color: orange;
+            box-shadow: 4px 3px 32px 7px rgba(0,0,0,0.75);
+            position: absolute;
+            left: 150px;
+        }  
+
+        .laos {
+            width: 500px;
+            height: 300px;
+            margin-top: 20px;
+        }
+
+        .red {
+            height: 75px;
+            background-color: #ce1126;
+        }
+
+        .blue {
+            height: 150px;
+            background-color: #002868;
+            position: relative;
+        }
+
+        .circle {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS positioning</h1>
+    <div class="relative">
+        <div class="prvi"></div>
+        <div class="drugi"></div>
+    </div>
+
+    <h1>Zastava Laosa</h1>
+    <div class="laos">
+        <div class="red"></div>
+        <div class="blue">
+            <div class="circle"></div>
+        </div>
+        <div class="red"></div>
+    </div>
+
+</body>
+</html>

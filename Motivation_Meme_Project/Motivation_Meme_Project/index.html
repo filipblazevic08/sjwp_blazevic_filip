@@ -1,16 +1,67 @@
-<!-- 
-  TODO: Create a motivational post website.
-Style it how ever you like. 
-Look at the goal image for inspiration.
-But it must have the following features:
-1. The main h1 text should be using the Regular Libre Baskerville Font from Google Fonts:
-  https://fonts.google.com/specimen/Libre+Baskerville
-2. The text should be white and background black.
-3. Add your own image into the images folder inside assets. It should have a 5px white border.
-4. The text should be center aligned.
-5. Create a div to contain the h1, p and img elements. Adjust the margins so that the image and text are centered on the page. 
-  Hint: You horizontally center a div by giving it a width of 50% and a margin-left of 25%.
-  Hint: Set the image to have a width of 100% so it fills the div. 
-6. Read about the text-transform property on MDN docs to make the h1 uppercase with CSS.
-  https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform 
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivational Post</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Libre Baskerville', serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .container {
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 50px;
+    }
+
+    .motivation-img {
+      width: 100%;
+      border: 5px solid white;
+      margin-bottom: 25px; 
+    }
+
+    .main-title {
+      text-transform: uppercase;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .description {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    
+    <img class="motivation-img"
+         src="data:image/jpeg;base64,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"
+         alt="Motivacijska slika">
+
+    
+    <h1 class="main-title">Stay Motivated</h1>
+
+   
+    <p class="description">
+      Svaki mali korak vodi te prema cilju. Ne odustaj — napredak je napredak.
+    </p>
+
+  </div>
+
+</body>
+</html>
