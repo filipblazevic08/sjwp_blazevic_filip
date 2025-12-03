@@ -1,0 +1,81 @@
+.plava{
+    width: 500px;
+    height: 300px;
+    background-color: blue;
+    position: relative;
+}
+.bijela_h{
+    width: 500px;
+    height: 75px;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 100px;
+}
+.bijela_v{
+height: 300px;
+    width: 75px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 110px;
+}
+.crv_h{
+    width: 300px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    left: 132px;
+    z-index: 1;
+
+}
+.crv_v{
+
+    width: 500px;
+    height: 30px;
+    background-color: red;
+    position: absolute;
+    top:122px;
+    z-index: 2;
+}
+
+
+
+.trokut{
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 200px solid black;
+    border-top: 150px solid transparent;
+    border-bottom: 150px solid transparent;
+
+}
+.plava2{
+    width: 500px;
+    height: 300px;
+    background-color: aqua;
+    position: relative;
+}
+.zuta{
+    width: 500px;
+    height: 100px;
+    background-color: rgb(223,213,0);
+    position: absolute;
+    top: 100px;
+}
+
+
+.crvena{
+    width: 500px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 200px;
+    
+}
+
+.bijelizupci{
+
+
+    width: 0;
+    height: 0;
+    border-left: ;
+}

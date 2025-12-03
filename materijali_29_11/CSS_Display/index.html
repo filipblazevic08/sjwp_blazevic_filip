@@ -1,3 +1,12 @@
+Cilj 1: Tri kvadrata u horizontalnom rasporedu
+
+Za horizontalni raspored koristićemo display: inline za sve tri klase. Time će se kvadrati poravnati u istu liniju.
+
+Cilj 2: Tri kvadrata u vertikalnom rasporedu
+
+Za vertikalni raspored koristićemo display: block za sve tri klase. Time će svaki kvadrat zauzeti cijeli red.
+
+Cjelovit kod sa osnovnim CSS naredbama:
 <!DOCTYPE html>
 <html>
 
@@ -15,7 +24,7 @@
     }
 
     .red {
-      display: block;
+      display: inline; 
       width: 200px;
       height: 200px;
       background-color: red;
@@ -23,26 +32,44 @@
 
     .green {
       display: inline;
-      width: 200px;
       height: 200px;
       background-color: green;
     }
 
     .blue {
-      display: inline-block;
+      display: inline; 
       width: 200px;
       height: 200px;
       background-color: blue;
     }
+
+    
+
+    .green {
+      display: block; 
+    }
+
+    .blue {
+      display: block; 
+    }
+    */
   </style>
 </head>
 
-
 <body>
   <h1>CSS Display Property</h1>
-  <p class="red">Red Paragraph </p>
+
+  <!-- Goal 1: Horizontal Layout -->
+  <p class="red">Red Paragraph</p>
   <p class="green">Green Paragraph</p>
   <p class="blue">Blue Paragraph</p>
+
+  <!-- Goal 2: Vertical Layout (Uncomment to test) -->
+  <!-- 
+  <p class="red">Red Paragraph</p>
+  <p class="green">Green Paragraph</p>
+  <p class="blue">Blue Paragraph</p>
+  -->
 </body>
 
 </html>
