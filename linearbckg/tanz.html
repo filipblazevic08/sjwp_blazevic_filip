@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Zastava Tanzanije – linear-gradient</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #eee;
+    }
+
+    .flag {
+      width: 600px;
+      height: 400px; /* omjer 3:2 */
+      background: linear-gradient(
+        135deg,
+        #1eb53a 0%,
+        #1eb53a 38%,
+        #fcd116 38%,
+        #fcd116 41%,
+        #000000 41%,
+        #000000 59%,
+        #fcd116 59%,
+        #fcd116 62%,
+        #00a3dd 62%,
+        #00a3dd 100%
+      );
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="flag"></div>
+</body>
+</html>

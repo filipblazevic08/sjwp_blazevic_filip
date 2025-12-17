@@ -1,0 +1,113 @@
+
+
+.card {
+    display: flex;
+    width: 650px;
+    background-color: white;
+    border: 3px solid black;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.avatar {
+    margin-right: 30px;
+}
+
+.avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.info h1 {
+    margin: 0 0 10px 0;
+    font-size: 26px;
+}
+
+.description {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+.social {
+    margin-top: 15px;
+}
+
+.social a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 600px;
+    height: 350px;
+    position: relative;
+    background-color: #ebb273;
+}
+
+
+.stripe {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #e26d6a;
+}
+
+.stripe.left {
+    left: 120px;
+}
+
+.stripe.right {
+    right: 120px;
+}
+
+
+.middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 100%;
+    background-color: #e26d6a;
+}
+
+
+.diamond {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ebb273;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.diamond.top {
+    top: 110px;
+}
+
+.diamond.bottom {
+    top: 200px;
+}
+
+

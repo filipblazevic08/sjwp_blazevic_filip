@@ -210,3 +210,55 @@ transform: rotate(-20deg);
 }
 
 
+.container {
+    width: 600px;
+    height: 350px;
+    position: relative;
+    background-color: #ebb273;
+}
+
+/* Bočne trake */
+.stripe {
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background-color: #e26d6a;
+}
+
+.stripe.left {
+    left: 120px;
+}
+
+.stripe.right {
+    right: 120px;
+}
+
+/* Sredina */
+.middle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    height: 100%;
+    background-color: #e26d6a;
+}
+
+/* Romboidi */
+.diamond {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #ebb273;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.diamond.top {
+    top: 110px;
+}
+
+.diamond.bottom {
+    top: 200px;
+}
+
+
