@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Rotirajući element</title>
+  <style>
+    body {
+      height: 100pxd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+    }
+
+    .rotacija {
+      width: 100px;
+      height: 100px;
+      background-color: tomato;
+    
+      animation: okretanje 2s linear infinite;
+    }
+
+    @keyframes okretanje {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="rotacija"></div>
+
+</body>
+</html>

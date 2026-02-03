@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pomicanje kruga</title>
+  <style>
+    body {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      background-color: #f4f4f4;
+      overflow: hidden;
+    }
+
+    .krug {
+      width: 100px;
+      height: 100px;
+      background-color: dodgerblue;
+      border-radius: 50%;
+      animation: pomicanje 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes pomicanje {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(500px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="krug"></div>
+
+</body>
+</html>

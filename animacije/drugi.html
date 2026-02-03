@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Promjena boje pozadine</title>
+  <style>
+    body {
+      display: flex;
+      
+      align-items: center;
+      height: 100px;
+      background-color: #eee;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      animation: promjenaBoje 4s infinite linear;
+    }
+
+    @keyframes promjenaBoje {
+      0% {
+        background-color: red;
+      }
+      33% {
+        background-color: blue;
+      }
+      66% {
+        background-color: green;
+      }
+      100% {
+        background-color: red;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+
+</body>
+</html>
