@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Pojavljivanje teksta</title>
+  <style>
+    body {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+    }
+
+    .tekst {
+      font-size: 32px;
+      opacity: 0;
+      transform: translateX(30px);
+      animation: pojaviSe 3s infinite alternate ease;
+    }
+
+    @keyframes pojaviSe {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tekst">Dobrodošli!</div>
+
+</body>

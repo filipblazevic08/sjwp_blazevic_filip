@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>CSS Semafor</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background: #f0f0f0;
+  }
+
+  .semafor {
+    background: #222;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80px;
+  }
+
+  .light {
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    border-radius: 50%;
+    opacity: 0.2;
+    animation: svijetli 3s infinite;
+  }
+
+  .red {
+    background: red;
+    animation-delay: 0s;
+  }
+
+  .yellow {
+    background: yellow;
+    animation-delay: 1s;
+  }
+
+  .green {
+    background: green;
+    animation-delay: 2s;
+  }
+
+  @keyframes svijetli {
+    0%   { opacity: 0.2; }
+    10%  { opacity: 1; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0.2; }
+    100% { opacity: 0.2; }
+  }
+</style>
+</head>
+<body>
+
+<div class="semafor">
+  <div class="light red"></div>
+  <div class="light yellow"></div>
+  <div class="light green"></div>
+</div>
+
+</body>
+</html>

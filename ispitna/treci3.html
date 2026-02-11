@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+      height: 100px;
+      width: 200px;
+      display: flex;
+      align-items: center;
+      background-color: #f4f4f4;
+      overflow: hidden;
+    }
+
+    .krug {
+      width: 200px;
+      height: 100px;
+      background-color: dodgerblue;
+      animation: pomicanje 1.8s infinite alternate ease-in-out;
+    }
+
+    @keyframes pomicanje {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(50px);
+      }
+    }
+  </style>
+<body>
+     <div class="krug"></div>
+
+    
+</body>
+</html>
