@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Layout primjer</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f0f0f0;
+}
+
+.container{
+    width:600px;
+    margin:40px auto;
+}
+
+/* zajednički stil */
+.box{
+    padding:15px;
+    margin-bottom:10px;
+    border-radius:6px;
+    color:white;
+}
+
+/* header */
+.header{
+    background:#9e9e9e;
+}
+
+/* middle row */
+.middle{
+    display:flex;
+    gap:10px;
+}
+
+/* sidebar */
+.sidebar{
+    background:#555;
+    width:150px;
+}
+
+/* content */
+.content{
+    background:#555;
+    flex:1;
+}
+
+/* sidebar2 */
+.sidebar2{
+    background:#c0c0c0;
+    color:black;
+}
+
+/* footer */
+.footer{
+    background:#9e9e9e;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="box header">
+Header
+</div>
+
+<div class="middle">
+
+<div class="box sidebar">
+Sidebar
+</div>
+
+<div class="box content">
+Content<br>
+More content than we had before so this column is now quite tall.
+</div>
+
+</div>
+
+<div class="box sidebar2">
+Sidebar 2
+</div>
+
+<div class="box footer">
+Footer
+</div>
+
+</div>
+
+</body>
+</html>

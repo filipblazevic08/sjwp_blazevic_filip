@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Grid Zadatak 3</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+.container{
+    width:600px;
+    margin:50px auto;
+    padding:20px;
+    border:1px solid #ccc;
+
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 120px 120px;
+    gap:20px;
+}
+
+.box{
+    background:#4a4a4a;
+    color:white;
+    font-size:28px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:8px;
+}
+
+/* posebna pozicioniranja */
+.a{
+    grid-column: span 2;
+}
+
+.b{
+    grid-row: span 2;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+</div>
+
+</body>
+</html>
