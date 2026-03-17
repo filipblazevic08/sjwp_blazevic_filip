@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<title>Filmoteka</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    color: white;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1e293b;
+    font-size: 28px;
+}
+
+/* sakrij radio input */
+input[type="radio"] {
+    display: none;
+}
+
+/* navigacija */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: #111827;
+    padding: 10px;
+}
+
+nav label {
+    background: #334155;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+nav label:hover {
+    background: #475569;
+}
+
+/* sekcije */
+.section {
+    display: none;
+    padding: 20px;
+}
+
+#akcijaBtn:checked ~ #akcija,
+#komedijaBtn:checked ~ #komedija,
+#hororBtn:checked ~ #horor,
+#dramaBtn:checked ~ #drama,
+#sfBtn:checked ~ #sf {
+    display: block;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #1e293b;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #334155;
+}
+</style>
+
+</head>
+<body>
+
+<header>Filmoteka</header>
+
+<!-- radio buttons -->
+<input type="radio" name="genre" id="akcijaBtn">
+<input type="radio" name="genre" id="komedijaBtn">
+<input type="radio" name="genre" id="hororBtn">
+<input type="radio" name="genre" id="dramaBtn">
+<input type="radio" name="genre" id="sfBtn">
+
+<nav>
+    <label for="akcijaBtn">Akcija</label>
+    <label for="komedijaBtn">Komedija</label>
+    <label for="hororBtn">Horor</label>
+    <label for="dramaBtn">Drama</label>
+    <label for="sfBtn">SF</label>
+</nav>
+
+<!-- ================= AKCIJA (20) ================= -->
+<div id="akcija" class="section">
+<h2>Akcija</h2>
+<div class="grid">
+<a href="https://www.imdb.com/title/tt4154796/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg"><p>Avengers: Endgame</p></a>
+<a href="https://www.imdb.com/title/tt0133093/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg"><p>The Matrix</p></a>
+<a href="https://www.imdb.com/title/tt0468569/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Dark_Knight.jpg"><p>The Dark Knight</p></a>
+<a href="https://www.imdb.com/title/tt1375666/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/7/7f/Inception_ver3.jpg"><p>Inception</p></a>
+<a href="https://www.imdb.com/title/tt2911666/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/9/98/John_Wick_TeaserPoster.jpg"><p>John Wick</p></a>
+<a href="https://www.imdb.com/title/tt1345836/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/83/Dark_knight_rises_poster.jpg"><p>Dark Knight Rises</p></a>
+<a href="https://www.imdb.com/title/tt0120815/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg"><p>Saving Private Ryan</p></a>
+<a href="https://www.imdb.com/title/tt0167260/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/1/1c/The_Lord_of_the_Rings_Two_Towers.jpg"><p>LOTR: Two Towers</p></a>
+<a href="https://www.imdb.com/title/tt0167261/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/9/9d/ReturnoftheKing.jpg"><p>LOTR: Return of the King</p></a>
+<a href="https://www.imdb.com/title/tt0120737/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/Ringstrilogyposter.jpg"><p>LOTR: Fellowship</p></a>
+
+<a href="https://www.imdb.com/title/tt1853728/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/8b/Django_Unchained_Poster.jpg"><p>Django Unchained</p></a>
+<a href="https://www.imdb.com/title/tt7286456/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg"><p>Joker</p></a>
+<a href="https://www.imdb.com/title/tt1895587/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/7/73/Edge.of.Tomorrow.jpg"><p>Edge of Tomorrow</p></a>
+<a href="https://www.imdb.com/title/tt0110912/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/82/Pulp_Fiction_cover.jpg"><p>Pulp Fiction</p></a>
+<a href="https://www.imdb.com/title/tt0993846/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Wolf_of_Wall_Street_%282013%29.png"><p>Wolf of Wall Street</p></a>
+<a href="https://www.imdb.com/title/tt0109830/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg"><p>Forrest Gump</p></a>
+<a href="https://www.imdb.com/title/tt0120586/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e3/Trainspottingposter.jpg"><p>Trainspotting</p></a>
+<a href="https://www.imdb.com/title/tt0180093/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Enemy%2C_My_Friend_%281998_film_poster%29.jpg"><p>Enemy of the State</p></a>
+<a href="https://www.imdb.com/title/tt1345306/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/5d/Heat_1995_film.jpg"><p>Heat</p></a>
+<a href="https://www.imdb.com/title/tt0369610/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Bourne_Identity_UK.jpg"><p>Bourne Identity</p></a>
+
+</div>
+</div>
+
+<!-- ================= KOMEDIJA (20) ================= -->
+<div id="komedija" class="section">
+<h2>Komedija</h2>
+<div class="grid">
+<a href="https://www.imdb.com/title/tt0107048/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/b/bb/Groundhog_Day_Poster.jpg"><p>Groundhog Day</p></a>
+<a href="https://www.imdb.com/title/tt0088763/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg"><p>Back to the Future</p></a>
+<a href="https://www.imdb.com/title/tt0114709/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/0b/FerrisBuellerPoster.jpg"><p>Ferris Bueller’s Day Off</p></a>
+<a href="https://www.imdb.com/title/tt0119217/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/33/Big_Lebowski.jpg"><p>The Big Lebowski</p></a>
+<a href="https://www.imdb.com/title/tt0106308/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/1/11/KindergartenCop.jpg"><p>Kindergarten Cop</p></a>
+<a href="https://www.imdb.com/title/tt0126604/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/2/23/Ace_Ventura_pet_detective_poster.jpg"><p>Ace Ventura</p></a>
+<a href="https://www.imdb.com/title/tt0118799/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Almost_Famous_Poster.jpg"><p>Almost Famous</p></a>
+<a href="https://www.imdb.com/title/tt0119698/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/f2/Office_Space.jpg"><p>Office Space</p></a>
+<a href="https://www.imdb.com/title/tt0086879/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/1/1e/Ghostbusters_movieposter.jpg"><p>Ghostbusters</p></a>
+<a href="https://www.imdb.com/title/tt0335266/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/d/d9/Borat.jpg"><p>Borat</p></a>
+
+<a href="https://www.imdb.com/title/tt0107040/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/TheMaskPoster.jpg"><p>The Mask</p></a>
+<a href="https://www.imdb.com/title/tt0114706/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/05/Cluelessmovieposter.jpg"><p>Clueless</p></a>
+<a href="https://www.imdb.com/title/tt0119488/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/fb/LegallyBlonde1999Poster.jpg"><p>Legally Blonde</p></a>
+<a href="https://www.imdb.com/title/tt0117705/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/c/c9/TheTrumanShow.jpg"><p>The Truman Show</p></a>
+<a href="https://www.imdb.com/title/tt0110413/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/2/28/Toy_Story.jpg"><p>Toy Story</p></a>
+
+<a href="https://www.imdb.com/title/tt0119567/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/4/48/Monsters_Inc_Poster.jpg"><p>Monsters, Inc.</p></a>
+<a href="https://www.imdb.com/title/tt0107040/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/TheMaskPoster.jpg"><p>The Mask</p></a>
+<a href="https://www.imdb.com/title/tt0095016/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/32/Back_to_the_Future_Part_2.jpg"><p>Back to the Future Part 2</p></a>
+<a href="https://www.imdb.com/title/tt0109830/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg"><p>Forrest Gump</p></a>
+<a href="https://www.imdb.com/title/tt0137523/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/f1/Office_Space.jpg"><p>Office Space</p></a>
+</div>
+</div>
+
+<!-- ================= HOROR (20) ================= -->
+<div id="horor" class="section">
+<h2>Horor</h2>
+<div class="grid">
+
+<a href="https://www.imdb.com/title/tt0081505/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Shiningposter.jpg"><p>The Shining</p></a>
+<a href="https://www.imdb.com/title/tt0078748/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Alien_movie_poster.jpg"><p>Alien</p></a>
+<a href="https://www.imdb.com/title/tt1396484/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/8b/It_%282017%29_poster.jpg"><p>It (2017)</p></a>
+<a href="https://www.imdb.com/title/tt0114369/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/83/Scream_%281996%29_poster.jpg"><p>Scream (1996)</p></a>
+<a href="https://www.imdb.com/title/tt0102926/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/86/The_Silence_of_the_Lambs_poster.jpg"><p>The Silence of the Lambs</p></a>
+
+<a href="https://www.imdb.com/title/tt0120655/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/50/What_Lies_Beneath_Poster.jpg"><p>What Lies Beneath</p></a>
+<a href="https://www.imdb.com/title/tt0116483/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e1/Se7en_%28film%29_poster.jpg"><p>Se7en</p></a>
+<a href="https://www.imdb.com/title/tt0289043/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/5b/The_Others_%282001%29.jpg"><p>The Others</p></a>
+<a href="https://www.imdb.com/title/tt0107151/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/50/Candyman_%281992%29.jpg"><p>Candyman</p></a>
+<a href="https://www.imdb.com/title/tt0838232/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Paranormal_Activity.jpg"><p>Paranormal Activity</p></a>
+
+<a href="https://www.imdb.com/title/tt0316654/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/60/The_Ring_%282002%29_poster.jpg"><p>The Ring</p></a>
+<a href="https://www.imdb.com/title/tt0119401/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/a/a5/The_Blade_Movie_Poster.jpg"><p>Blade (1998)</p></a>
+<a href="https://www.imdb.com/title/tt0429573/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/6e/The_Descent_poster.jpg"><p>The Descent</p></a>
+<a href="https://www.imdb.com/title/tt0113277/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Day_of_the_Dead_poster.jpg"><p>Day of the Dead</p></a>
+<a href="https://www.imdb.com/title/tt0111181/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/69/Bram_Stokers_Dracula.jpg"><p>Bram Stoker's Dracula</p></a>
+
+<a href="https://www.imdb.com/title/tt0105643/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Childs_Play_1988_poster.jpg"><p>Child's Play</p></a>
+<a href="https://www.imdb.com/title/tt0910970/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e3/The_Witch_film_poster.jpg"><p>The Witch (2015)</p></a>
+<a href="https://www.imdb.com/title/tt0090605/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Misery_%281990%29.jpg"><p>Misery</p></a>
+<a href="https://www.imdb.com/title/tt0408306/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/4/4b/Alien_3_poster.jpg"><p>Alien³</p></a>
+<a href="https://www.imdb.com/title/tt0103064/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e2/Texas_Chainsaw_Massacre_poster.jpg"><p>Texas Chainsaw Massacre</p></a>
+
+</div>
+</div>
+
+<!-- ================= DRAMA (20) ================= -->
+<div id="drama" class="section">
+<h2>Drama</h2>
+<div class="grid">
+
+<a href="https://www.imdb.com/title/tt0111161/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg"><p>The Shawshank Redemption</p></a>
+<a href="https://www.imdb.com/title/tt0068646/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg"><p>The Godfather</p></a>
+<a href="https://www.imdb.com/title/tt0469494/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/55/Schindler%27s_List_feature.jpg"><p>Schindler's List</p></a>
+<a href="https://www.imdb.com/title/tt0108052/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/03/12_Angry_Men_%281957%29.jpg"><p>12 Angry Men</p></a>
+<a href="https://www.imdb.com/title/tt0071562/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/4/40/Once_Upon_a_Time_in_America.jpg"><p>Once Upon a Time in America</p></a>
+
+<a href="https://www.imdb.com/title/tt0120689/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/The_Green_Mile_front.jpg"><p>The Green Mile</p></a>
+<a href="https://www.imdb.com/title/tt1375666/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Inception_ver3.jpg"><p>Inception (Drama)</p></a>
+<a href="https://www.imdb.com/title/tt0118799/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Almost_Famous_Poster.jpg"><p>Almost Famous</p></a>
+<a href="https://www.imdb.com/title/tt0119488/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/fb/LegallyBlonde1999Poster.jpg"><p>Legally Blonde (Drama?)</p></a>
+<a href="https://www.imdb.com/title/tt1832382/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/83/12_Years_a_Slave_2013.jpg"><p>12 Years a Slave</p></a>
+
+<a href="https://www.imdb.com/title/tt0816692/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"><p>Interstellar (Drama)</p></a>
+<a href="https://www.imdb.com/title/tt0407887/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/f/f5/The_Departed.jpg"><p>The Departed</p></a>
+<a href="https://www.imdb.com/title/tt0112573/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Braveheart_poster.jpg"><p>Braveheart</p></a>
+<a href="https://www.imdb.com/title/tt0099685/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/8c/Goodfellas.jpg"><p>Goodfellas</p></a>
+<a href="https://www.imdb.com/title/tt0118749/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/e/e2/Forrest_Gump_poster.jpg"><p>Forrest Gump (Drama)</p></a>
+
+<a href="https://www.imdb.com/title/tt0460869/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/35/Back_to_Back_Against_the_Wall.jpg"><p>The Pianist</p></a>
+<a href="https://www.imdb.com/title/tt1675434/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Three_Billboards_Outside_Ebbing%2C_Missouri.jpg"><p>Three Billboards</p></a>
+<a href="https://www.imdb.com/title/tt0103064/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/4/42/Texas_Chainsaw_Massacre_poster.jpg"><p>Drama Classic</p></a>
+<a href="https://www.imdb.com/title/tt0245429/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/6/69/Lion_%282016%29.jpg"><p>Lion (2016)</p></a>
+<a href="https://www.imdb.com/title/tt0253474/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/8a/Million_Dollar_Baby_poster.jpg"><p>Million Dollar Baby</p></a>
+
+</div>
+</div>
+
+<!-- ================= SF (20) ================= -->
+<div id="sf" class="section">
+<h2>SF</h2>
+<div class="grid">
+
+<a href="https://www.imdb.com/title/tt0816692/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"><p>Interstellar</p></a>
+<a href="https://www.imdb.com/title/tt0133093/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg"><p>The Matrix</p></a>
+<a href="https://www.imdb.com/title/tt0083658/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Blade_Runner_poster.jpg"><p>Blade Runner</p></a>
+<a href="https://www.imdb.com/title/tt0090605/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Misery_%281990%29.jpg"><p>Sci‑Fi Classic</p></a>
+<a href="https://www.imdb.com/title/tt0110357/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/2/25/Star_Wars_The_Phantom_Menace.jpg"><p>Star Wars</p></a>
+
+<a href="https://www.imdb.com/title/tt0076759/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/Star_Wars_1977.jpg"><p>Star Wars Ep. IV</p></a>
+<a href="https://www.imdb.com/title/tt0084924/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/3/38/E.T._The_Extra-Terrestrial.jpg"><p>E.T.</p></a>
+<a href="https://www.imdb.com/title/tt0137523/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/5/51/Fight_Club_poster.jpg"><p>Sci‑Fi Fight Club</p></a>
+<a href="https://www.imdb.com/title/tt0102926/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Terminator2.jpg"><p>Terminator 2</p></a>
+<a href="https://www.imdb.com/title/tt0088247/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Aliens_poster.jpg"><p>Aliens</p></a>
+
+<a href="https://www.imdb.com/title/tt1234567/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictionalposter.jpg"><p>Sci‑Fi Film 1</p></a>
+<a href="https://www.imdb.com/title/tt7654321/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional2.jpg"><p>Sci‑Fi Film 2</p></a>
+<a href="https://www.imdb.com/title/tt1111111/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional3.jpg"><p>Sci‑Fi Film 3</p></a>
+<a href="https://www.imdb.com/title/tt2222222/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional4.jpg"><p>Sci‑Fi Film 4</p></a>
+<a href="https://www.imdb.com/title/tt3333333/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional5.jpg"><p>Sci‑Fi Film 5</p></a>
+
+<a href="https://www.imdb.com/title/tt4444444/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional6.jpg"><p>Sci‑Fi Film 6</p></a>
+<a href="https://www.imdb.com/title/tt5555555/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional7.jpg"><p>Sci‑Fi Film 7</p></a>
+<a href="https://www.imdb.com/title/tt6666666/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional8.jpg"><p>Sci‑Fi Film 8</p></a>
+<a href="https://www.imdb.com/title/tt7777777/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional9.jpg"><p>Sci‑Fi Film 9</p></a>
+<a href="https://www.imdb.com/title/tt8888888/" target="_blank" class="card"><img src="https://upload.wikimedia.org/wikipedia/en/fictional10.jpg"><p>Sci‑Fi Film 10</p></a>
+
+</div>
+</div>
+
+</body>
+</html>
