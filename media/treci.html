@@ -1,87 +1,44 @@
 <!DOCTYPE html>
-<html lang="sr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Responsive Layout</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+   .container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+   }
+   .kartica{
+    background: red;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+   }
+   @media(max-width:1024px){
+    .container{
+      grid-template-columns: repeat(2,1fr);
+    }
+   }
+   @media(max-width:767px){
+    .container{
+      grid-template-columns: 1fr;
+    }
+   }
+
+  </style>
 </head>
-<style>
-
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: #eee;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-}
-
-.container {
-  display: grid;
-  gap: 10px;
-  width: 100%;
-  max-width: 900px;
-}
-
-/* 📱 MOBILE (default) */
-.container {
-  grid-template-areas:
-    "header"
-    "main"
-    "left"
-    "right"
-    "footer";
-}
-
-.header { grid-area: header; background: #ef6b6b; }
-.main   { grid-area: main;   background: #eaeaea; }
-.left   { grid-area: left;   background: #e6c85c; }
-.right  { grid-area: right;  background: #b7d96b; }
-.footer { grid-area: footer; background: #6aaed6; }
-
-.container > * {
-  padding: 30px;
-  text-align: center;
-  font-size: 18px;
-}
-
-/* 📱 TABLET (≥768px) */
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "header header"
-      "main   main"
-      "left   right"
-      "footer footer";
-  }
-}
-
-/* 💻 DESKTOP (≥1024px) */
-@media (min-width: 1024px) {
-  .container {
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas:
-      "header header header"
-      "left   main   right"
-      "footer footer footer";
-  }
-}
-</style>
 <body>
-
-<div class="container">
-  <header class="header">Header</header>
-  <main class="main">Main</main>
-  <aside class="left">Left</aside>
-  <aside class="right">Right</aside>
-  <footer class="footer">Footer</footer>
-</div>
-
+  <div class="container">
+    <div class="kartica">1</div>
+    <div class="kartica">2</div>
+    <div class="kartica">3</div>
+    <div class="kartica">4</div>
+    <div class="kartica">5</div>
+    <div class="kartica">6</div>
+    <div class="kartica">7</div>
+    <div class="kartica">8</div>
+  </div>
 </body>
 </html>

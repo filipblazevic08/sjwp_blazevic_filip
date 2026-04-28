@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .galleria{
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       gap: 10px;
+
+     }
+     .img{
+        background: green;
+        height: 100px;
+        border-radius: 10px;
+
+     }
+     @media(max-width:1024px){
+        .galleria{
+            grid-template-columns: repeat(2,1fr);
+
+
+        }
+     }
+     @media(max-width:767){
+        .galleria{
+            grid-template-columns: 1fr;
+        }
+     }
+
+    </style>
+</head>
+<body>
+    <div class="galleria">
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    <div class="img"></div>
+    </div>
+
+</body>
+</html>
