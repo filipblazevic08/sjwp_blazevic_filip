@@ -1,348 +1,562 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SJWP">
-  <meta name="keywords" content="HTML, CSS, JavaScript">
-  <meta name="author" content="Filip Blazevic">
-    <title>Filip Blazevic </title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Moja Osobna Web Stranica</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
-       .drugi{
-        color:blue;
-       }
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar{
+            box-shadow: 0 2px 10px green;
+        }
+
+        /* Hero */
+        .hero{
+            height: 100vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('data:image/jpeg;base64,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');
+
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1{
+            font-size: 4rem;
+            font-weight: bold;
+        }
+
+        .hero p{
+            font-size: 1.3rem;
+        }
+
+        /* Profilna slika */
+        .profile-img{
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #198754;
+        }
+
+        /* Naslovi */
+        .section-title{
+            color: #198754;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        /* Kartice */
+        .card{
+            transition: 0.3s;
+            border: none;
+        }
+
+        .card:hover{
+            transform: translateY(-10px);
+        }
+
+        .card img{
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Skill box */
+        .skill-box{
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        /* Kontakt forma */
+        .contact-form{
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        /* Footer */
+        footer{
+            margin-top: 50px;
+        }
+
     </style>
 </head>
+
 <body>
-<h1>Zatava Bocvane</h1>
-
-
-<h2>nacini dodavanja cssa</h2>
-<ul>
-  <li style="color:brown;">inline CSS</li>
-  <li class="drugi">Internal CSS</li>
-  <li class="treci">External CSS</li>
-</ul>
-  
- <h1>Jane Doe</h1>
-    <img src="data:image/jpeg;base64,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" alt="Jane Doe" width="100">
-    
-    
-
-    <h2>Summary</h2>
-    <p>I am a hardworking and dedicated individual with experience in customer service and administration.</p>
-    <hr>
-
-    <h2>Education</h2>
-    <ul>
-        <li>Bachelor of Arts, Business Administration - University of XYZ (2010–2014)</li>
-    </ul>
-    <hr>
-
-    <h2>Work Experience</h2>
-
-    <b>Customer Service Representative - ABC Inc.</b><br>
-    <i>June 2014 - May 2018</i>
-    <ul>
-        <li>Answered customer inquiries via phone and email</li>
-        <li>Resolved customer complaints and issues</li>
-        <li>Maintained customer records and updated account information</li>
-    </ul>
-
-    <b>Administrative Assistant - XYZ Corp.</b><br>
-    <i>June 2018 - Present</i>
-    <ul>
-        <li>Assisted with scheduling appointments and meetings</li>
-        <li>Managed incoming and outgoing mail and correspondence</li>
-        <li>Prepared reports and presentations using Microsoft Office Suite</li>
-    </ul>
-    <hr>
-
-    <h2>Skills</h2>
-    <ul>
-        <li>Customer service: ⭐⭐⭐⭐⭐</li>
-        <li>Microsoft Office Suite: ⭐⭐⭐</li>
-        <li>Organizational skills: ⭐⭐⭐⭐</li>
-    </ul>
-    <hr>
-
-    <h2>Awards and Certifications</h2>
-    <ul>
-        <li>Employee of the Month - ABC Inc. (August 2016)</li>
-    </ul>
-    <hr>
-
-    <h2>Other</h2>
-    <ul>
-        <li><a href="http://slither.com/io">My Hobbies</a></li>
-        <li><a href="https://agar.io/#ffa">Contact Me</a></li>
-    </ul>
-
-    <hr>
-    <p>© Jane Doe. All rights reserved.</p>
-
-
-
-
-
-
-
-
-
-  <h1>Zadaće:</h1>
-  <ol>
-  <li><a href="./zadace/zadaca1.html">zadaća</a></li>
-  <li><a href="./zadace/zadaca2.html">zadaća</a></li>
-  <li><a href="./zadace/zadaca3.html">zadaća</a></li>
-  <li>zadaća</li>
-  <li>zadaća</li>
-</ol>
-
-    <!-- naslovi,heading -->
-     <h1>Naslov 1</h1>
-     <h2>Naslov 2</h2>
-     <h3>Naslov 3</h3>
-     <h4>Naslov 4</h4>
-     <h5>Naslov 5</h5>
-     <h6>Naslov 6</h6>
-
-     <!-- paragraf -->
-      <!-- break element -->
-      <p>Lorem ipsum dolo
-        r sit amet consectetur adipisicing elit. In<br> <hr>neque natus minima dolores voluptatibus numquam corrupti 
-        recusandae tempora esse itaque quibusdam id doloremque, veritatis, blanditiis aliquid autem. Ipsum, aliquid laudantium!</p>
-
-    <h1>moj najdraazi film</h1>
-    <p draggable="true">fight club</p>
-    <h2>moja na najdraaza komedija</h2>
-    <p>mrak</p>
-    <h3>moj najdrazi horor</h3>
-    <p>conjuring</p>
-    <!--  b,strong,i,em,pre,sub,sup,marl,del -->
-    <p>
-      Mi smo <strong>3.E razred</strong>. Razrednik <sup>nam </sup>je <em>profesor <mark>Ivan Benic</mark></em>.Ima nas <del>28</del> 26 u razredu.
-    </p>
-    <pre>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates quos accusantium, dicta ad reprehenderit debitis ad
-      ipisci. Blanditiis velit ducimus quo nihil ea, eligendi quae. Exercitationem, beatae? Consequatur, ducimus doloremque.
-    </pre>
-     <!-- liste,ul-unordered,ol-ordered list,dl-definition list -->
-      <h3>voćni deserti u čaši</h3>
-      <h4 id="naslov">sastojci:</h4>
-     <ul style="list-style-type:lower-alpha;">
-      <li>230 g kreme za kremšnite</li>
-      <li>500 ml hladnog mlijeka</li>
-      <li>3-4 žlice pekmeza od višanja</li>
-     </ul>
-     <h4>priprema</h4>
-     <ol start="2">
-      <li>Prah za kremu pomiješati sa pola litre hladnog mlijeka te miksati 2-3 minute dok se ne dobije jednolična krema. </li>
-      <li>Pekmez od višanja rastopiti na blagoj vatri i ohladiti.</li>
-      <li>U desertne čaše rasporediti sloj pripremljene kreme pa žlicu i pol voćnog nadjeva te ponoviti još jednom postupak i završiti sa voćnim slojem. Posipati nasjeckanim pistacijem i staviti u hladnjak na hlađenje. </li>
-     </ol>
-     <h3>definition lista</h3>
-     <dl>
-      <dt>struja</dt>
-      <dd>usmjereno gibanje elektrona kroz vodič</dd>
-      <dt>napon</dt>
-      <dd>razlika potencijala izmedudvije tocke</dd>
-     </dl>
-    <h3>nested list</h3>
-    <ol>
-      <li>A</li>
-      <li>B</li>
-      <ol>
-        <li>B1</li>
-        <li>B2</li>
-        <ul>
-          <li>B2a</li>
-          <ul>
-            <li>B2aa</li>
-            <li>B2ab</li>
-            <ul>
-              <li>B2b</li>
-              <li>B2c</li>
-              <ul>
-                <li>B3</li>
-                <ol>
-                  <li>B31</li>
-                <li>B32</li>
-                </ol>
-              </ul>
-            </ul>
-          </ul>
-          
-        </ul>
-
-      </ol>
-      
-    </ol>
-      </body>
-      <h2>Anchor element</h2>
-      <p>stranicu škole možete pogledati <a href="http://tssb.hr" target="_blank">ovdje</a>.</p>
-
-
-      <h2>My top 5 favorites websites</h2>
-      <ol>
-        <li><a href="https://ritosa-trgovine.hr/hr">ritosa</a></li>
-        <li><a href="https://gnkdinamo.hr/">dinamo</a></li>
-        <li><a href="https://venatio.hr/">vtienao</a></li>
-        <li><a href="https://hr-moto.com/">moto</a></li>
-        <li><a href="https://www.youtube.com/">youtube</a></li>
-      </ol>
-
-      <h2>slika i img element</h2>
-     <!--  slika s web -->
-      <img src="https://exoticfruitbox.com/wp-content/uploads/2015/10/mango.jpg" alt="slika manga "width="600" height="400">
-       <br>
-       <hr> 
-       <p>slika s naseg pca</p>
-       <img src="./slike/mango.jpg" alt="slika mango phonk">
-
-
-
-
-
-       <h1>Rođendan mi je !</h1>
-       <h2>On the 12th May</h2>
-       <img src="https://www.tortte.com/wp-content/uploads/2025/02/rodjendanska-torta-za-djevojcicu-540x540.jpg" alt="slika torte">
-
-       <h3>what to bring:</h3>
-       <ol>
-        <li>balone</li>
-        <li>tortu</li>
-        <li>apetit</li>
-       </ol>
-
-       <h4>mjesto:</h4>
-       <a href="https://maps.app.goo.gl/nQNw8XJ8Jd6XAj9s5">mesto</a>
-
-       <br>
-       <h2>slika kao link</h2>
-       <a href="https://www.youtube.com/"> <img src="./slike/Logo_youtube_ios_(cropped).jpg" alt="yt"></a>
-
-       
-        <h2>tablice u htmlu</h2>
-        <table border="1">
-            <tr>
-              <th colspan="2">ime prezime</th>
-            
-              <th>link</th>
-              <th>razred</th>
-            </tr>
-
-            <tr>
-              <td>petar</td>
-              <td>basanovic</td>
-              <td>https://google.com</td>
-              <td rowspan="3">3.e</td>
-            </tr>
-            
-            <tr>
-              <td>david</td>
-              <td>grgic</td>
-              <td>https://policija.hr</td>
-              
-            </tr>
-            <tr>
-               <td>petar</td>
-              <td>basanovic</td>
-              <td>https://google.com</td>
-            </tr>
-        </table>
-       
-
-
-       <table border="1">
-        <tr>
-          <th>name</th>
-          <th>age</th>
-          <th>country</th>
-        </tr>
-
-        <tr>
-          <td>harry depp</td>
-          <td>28</td>
-          <td>britain</td>
-        </tr>
-
-        <tr>
-          <td>john smith</td>
-          <td>35</td>
-          <td>usa</td>
-        </tr>
-
-        <tr>
-          <td>ram krishna</td>
-          <td>19</td>
-          <td>nepal</td>
-        </tr>
-
-        
-
-
-
-
-
-
-       </table>
-
-
-       <table border="1">
-
-        <tr>
-        <th>s.n</th>
-        <th>item</th>
-        <th>quanity</th>
-       </tr>
-
-        <tr>
-          <td>1</td>
-          <td>apple</td>
-          <td>2</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>mango</td>
-          <td>2</td>
-        </tr>
-
-        <tr>
-
-          <td>3</td>
-          <td>orange</td>
-          <td>1</td>
-        </tr>
-<tr>
-
-          <td colspan="2">total </td>
-          <td>5</td>
-        </tr>
-       
-
-
-
-       </table>
-
-
-       <table border="1">
-
-         <tr>
-          <th>name </th>
-          <th>subject</th>
-          <th>marks</th>
-         </tr>
-
-         <tr>
-            <td rowspan=""></td>
-
-         </tr>
-
-       </table>
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
+        <div class="container">
 
+            <a class="navbar-brand fw-bold" href="#">
+                Šaranski Ribolov
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#o-meni">O meni</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hobiji">Hobiji</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vjestine">Vještine</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#zadace">Zadaće</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontakt">Kontakt</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>Moja Osobna Web Stranica</h1>
+
+            <p class="mt-3">
+                Dobrodošli na moju web stranicu posvećenu šaranskom ribolovu,
+                prirodi i avanturama.
+            </p>
+
+            <a href="#o-meni" class="btn btn-success btn-lg mt-4">
+                Saznaj Više
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- O meni -->
+    <section id="o-meni" class="py-5">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-4 text-center">
+
+                    <img src="data:image/jpeg;base64,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"
+                    class="profile-img shadow"
+                    alt="Profilna slika">
+
+                </div>
+
+                <div class="col-lg-8">
+
+                    <h2 class="section-title">O meni</h2>
+
+                    <p>
+                        Zovem se Filip Blažević i veliki sam ljubitelj šaranskog ribolova.
+                        Ribolovom se bavim više od 10 godina i to je moj najveći hobi.
+                        Najviše volim provoditi vrijeme uz jezera i rijeke,
+                        istraživati nove lokacije i isprobavati nove tehnike ribolova.
+                    </p>
+
+                    <p>
+                        Šaranski ribolov nije samo hobi nego i način života.
+                        Tijekom višednevnih kampiranja upoznao sam mnogo ljudi,
+                        stekao nova iskustva i naučio više o prirodi.
+                    </p>
+
+                    <p>
+                        Osim ribolova zanimaju me kampiranje, sport, fotografija
+                        i web programiranje. Volim izrađivati web stranice koristeći
+                        HTML, CSS i Bootstrap.
+                    </p>
+
+                    <button class="btn btn-success">
+                        Moji Ulovi
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Hobiji -->
+    <section id="hobiji" class="py-5 bg-light">
+
+        <div class="container">
+
+            <h2 class="text-center section-title">
+                Moji Hobiji
+            </h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="card shadow h-100">
+
+                        <img src="https://www.pmlfishing.hr/images/thumbs/0010373_saranski-stapovi-za-ribolov.jpeg"
+                        class="card-img-top"
+                        alt="Ribolov">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Šaranski Ribolov
+                            </h5>
+
+                            <p class="card-text">
+                                Obožavam višednevni ribolov, pripremu mamaca
+                                i istraživanje novih ribolovnih pozicija.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card shadow h-100">
+
+                        <img src="data:image/jpeg;base64,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"
+                        class="card-img-top"
+                        alt="Kampiranje">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Kampiranje
+                            </h5>
+
+                            <p class="card-text">
+                                Tijekom ribolova često kampiram uz vodu i uživam
+                                u prirodi i opuštanju.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="card shadow h-100">
+
+                        <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?q=80&w=1200&auto=format&fit=crop"
+                        class="card-img-top"
+                        alt="Fotografija">
+
+                        <div class="card-body">
+
+                            <h5 class="card-title">
+                                Fotografija
+                            </h5>
+
+                            <p class="card-text">
+                                Volim fotografirati prirodu, zalazak sunca
+                                i svoje ribolovne avanture.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Vještine -->
+    <section id="vjestine" class="py-5">
+
+        <div class="container">
+
+            <h2 class="text-center section-title">
+                Moje Vještine
+            </h2>
+
+            <div class="row g-4 text-center">
+
+                <div class="col-md-3">
+
+                    <div class="skill-box shadow">
+
+                        <h4>Ribolov</h4>
+
+                        <div class="progress mt-3">
+
+                            <div class="progress-bar bg-success" style="width:95%">
+                                95%
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-box shadow">
+
+                        <h4>Kampiranje</h4>
+
+                        <div class="progress mt-3">
+
+                            <div class="progress-bar bg-success" style="width:90%">
+                                90%
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-box shadow">
+
+                        <h4>Fotografija</h4>
+
+                        <div class="progress mt-3">
+
+                            <div class="progress-bar bg-success" style="width:80%">
+                                80%
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="skill-box shadow">
+
+                        <h4>HTML/CSS</h4>
+
+                        <div class="progress mt-3">
+
+                            <div class="progress-bar bg-success" style="width:75%">
+                                75%
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Zadaće -->
+    <section id="zadace" class="py-5 bg-light">
+
+        <div class="container">
+
+            <h2 class="text-center section-title">
+                Moje Zadaće
+            </h2>
+
+            <div class="row">
+
+                <div class="col-lg-8 mx-auto">
+
+                    <ul class="list-group shadow">
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                            Prva zadaća
+
+                            <a href="http://127.0.0.1:5500/Zadaca1/zadaca1.html"
+                            target="_blank"
+                            class="btn btn-success btn-sm">
+
+                                Otvori
+
+                            </a>
+
+                        </li>
+
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+
+                            Druga zadaća
+
+                            <a href="http://127.0.0.1:5500/Zadaca2/zadaca2.html"
+                            target="_blank"
+                            class="btn btn-success btn-sm">
+
+                                Otvori
+ 
+                            class="btn btn-success btn-sm">
+
+                                Otvori
+
+                            </a>
+
+                        </li>
+
+                    
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Kontakt Forma -->
+    <section id="kontakt" class="py-5">
+
+        <div class="container">
+
+            <h2 class="text-center section-title">
+                Kontaktirajte Nas
+            </h2>
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-8">
+
+                    <form method="GET" class="contact-form shadow">
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Ime
+                                </label>
+
+                                <input type="text"
+                                class="form-control"
+                                placeholder="Unesite ime"
+                                required>
+
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+
+                                <label class="form-label">
+                                    Email
+                                </label>
+
+                                <input type="email"
+                                class="form-control"
+                                placeholder="Unesite email"
+                                required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Datum
+                            </label>
+
+                            <input type="date"
+                            class="form-control">
+
+                        </div>
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Poruka
+                            </label>
+
+                            <textarea class="form-control"
+                            rows="6"
+                            placeholder="Unesite poruku"></textarea>
+
+                        </div>
+
+                        <button type="submit"
+                        class="btn btn-success btn-lg">
+
+                            Pošalji Poruku
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+
+        <div class="container">
+
+            <p class="mb-0">
+                © 2025 Moja Osobna Web Stranica | Šaranski Ribolov
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
